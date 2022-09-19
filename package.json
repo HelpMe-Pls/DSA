@@ -18,6 +18,6 @@
         "clear": "./scripts/clear",
         "prettier": "prettier --write ./src",
         "generate": "./scripts/generate",
-        "day": "echo /home/mpaulson/personal/kata-machine/src/day2"
+        "day": "echo C:\\Users\\ASUS\\Desktop\\scrap\\DSA\\kata-machine\\src\\day1"
     }
 }

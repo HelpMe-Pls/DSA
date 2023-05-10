@@ -1,11 +1,6 @@
-type Node<T> = {
-    value: T,
-    prev?: Node<T>
-}
-
 export default class Stack<T> {
     public length: number;
-    private head?: Node<T>
+    private head?: ListNode<T>
 
     constructor() {
         this.head = this.head = undefined
@@ -13,7 +8,7 @@ export default class Stack<T> {
     }
 
     push(item: T): void {
-        const newNode = { value: item } as Node<T>
+        const newNode = { value: item } as ListNode<T>
 
         this.length++
 

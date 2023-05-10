@@ -1,12 +1,7 @@
-type Node<T> = {
-    value: T,
-    next?: Node<T>
-}
-
 export default class Queue<T> {
     public length: number;
-    private head?: Node<T>
-    private tail?: Node<T>
+    private head?: ListNode<T>
+    private tail?: ListNode<T>
 
     constructor() {
         this.head = this.tail = undefined
@@ -14,7 +9,7 @@ export default class Queue<T> {
     }
 
     enqueue(item: T): void {
-        const newNode = { value: item } as Node<T>
+        const newNode = { value: item } as ListNode<T>
         this.length++
 
         if (!this.tail) {

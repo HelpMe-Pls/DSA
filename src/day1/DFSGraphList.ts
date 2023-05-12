@@ -1,10 +1,3 @@
-const dir = [
-  [-1, 0],  // left
-  [1, 0],   // right
-  [0, -1],  // down
-  [0, 1],   // up
-]
-
 function steps(graph: WeightedAdjacencyList, curr: number, needle: number, seen: boolean[], path: number[]): boolean {
   // Hit previously visited point:
   if (seen[curr]) return false
@@ -13,17 +6,16 @@ function steps(graph: WeightedAdjacencyList, curr: number, needle: number, seen:
   // Pre-recursion:
   seen[curr] = true
   path.push(curr)
-  if (curr == needle) return true
+  if (curr == needle) return true  // found it
 
 
   // Recursive calls:
   const list = graph[curr]
-  for (const i of list) {
-    const edge = i
+  for (const edge of list) {
     if (steps(graph, edge.to, needle, seen, path)) return true
   }
 
-  // Post-recursion:
+  // Post-recursion: maintaining the order of the path when we're bubbling up the call stack
   path.pop()
 
   return false

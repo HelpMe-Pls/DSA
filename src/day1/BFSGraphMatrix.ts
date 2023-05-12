@@ -33,7 +33,6 @@ export default function bfs(graph: WeightedAdjacencyMatrix, source: number, need
   while (prev[curr] != -1) {
     path.push(curr)
     curr = prev[curr]
-    console.log(path)
   }
 
   return [source].concat([...path].reverse())

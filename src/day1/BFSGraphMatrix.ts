@@ -2,7 +2,6 @@ export default function bfs(graph: WeightedAdjacencyMatrix, source: number, need
   const traversedPath = new Array(graph.length).fill(false)
 
   // if it's != -1 then there's a connection with the current node
-  // e.g. prev[69] means the connection with the current node with the weight of 69
   const prev = new Array(graph.length).fill(-1)
 
   traversedPath[source] = true    // start from the source node

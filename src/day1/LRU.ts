@@ -41,7 +41,6 @@ export default class LRU<K, V> {
         this.length--
     }
 
-
     constructor(private capacity: number) {
         this.length = 0
         this.head = this.tail = undefined

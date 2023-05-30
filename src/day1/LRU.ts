@@ -42,6 +42,7 @@ export default class LRU<K, V> {
     }
 
     constructor(private capacity: number) {
+        // `capacity` remains constant throughout the lifetime of the LRU object.
         this.length = 0
         this.head = this.tail = undefined
         this.lookup = new Map<K, ListNode<V>>()
